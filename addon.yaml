@@ -30,7 +30,7 @@ spec:
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: mysql-pv-claim
+  name: {{.AddonName}}-mysql-pv-claim
   labels:
     app: {{.AppName}}
     apps: {{.AddonName}}
@@ -112,4 +112,4 @@ spec:
       volumes:
       - name: data
         persistentVolumeClaim:
-          claimName: mysql-pv-claim
+          claimName: {{.AddonName}}-mysql-pv-claim
