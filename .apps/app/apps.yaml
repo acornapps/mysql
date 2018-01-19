@@ -50,7 +50,7 @@ metadata:
     app: {{.AppName}}
     apps: {{.AddonName}}
 spec:
-  replicas: 1
+  replicas: {{.Replicas}}
   selector:
     matchLabels:
       apps: {{.AddonName}}
@@ -67,11 +67,11 @@ spec:
         imagePullPolicy: IfNotPresent
         resources:
           limits:
-            cpu: "1"
-            memory: 1Gi
+            cpu: {{.LimitCpu}}
+            memory: {{.LimitMemory}}
           requests:
-            cpu: 500m
-            memory: 512Mi
+            cpu: {{.RequestCpu}}
+            memory: {{.RequestMemory}}
         env:
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:

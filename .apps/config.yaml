@@ -1,0 +1,14 @@
+builds: []
+variables:
+  - name: Image
+    value: mysql:5.7.14
+  - name: Replicas
+    value: 1
+  - name: RequestCpu
+    value: 500m
+  - name: RequestMemory
+    value: 512Mi
+  - name: LimitCpu
+    value: 1
+  - name: LimitMemory
+    value: 1Gi
