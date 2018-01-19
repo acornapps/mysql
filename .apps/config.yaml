@@ -1,7 +1,7 @@
 builds: []
 variables:
   - name: Image
-    value: mysql:5.7.16
+    value: mysql:5.7.14
   - name: Replicas
     value: 1
   - name: RequestCpu
