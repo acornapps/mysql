@@ -60,6 +60,9 @@ spec:
       containers:
       - name: {{.AppName}}
         image: {{.Image}}
+        args:
+          - "--ignore-db-dir"
+          - "lost+found"        
         imagePullPolicy: IfNotPresent
         resources:
           limits:
